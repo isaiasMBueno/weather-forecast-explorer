@@ -76,17 +76,6 @@ Because this is a static front-end project, setup is minimal:
 
 ---
 
-## Suggested Repository Names
-
-If you want a more marketable/professional repository name, here are good options:
-
-- **weather-forecast-explorer** *(recommended)*
-- `weather-xml-dashboard`
-- `cptec-weather-viewer`
-- `forecast-cards-demo`
-
----
-
 ## Educational Value
 
 This project is ideal for:
