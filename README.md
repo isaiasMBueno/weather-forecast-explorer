@@ -1,66 +1,98 @@
-# Previsão do Tempo
+# Weather Forecast Explorer
 
+A lightweight front-end project that demonstrates how to consume a public weather API and render a **7-day forecast** with a clean, card-based interface.
 
-![GitHub IFSP](https://ctd.ifsp.edu.br/images/IFSP-CTD2.png)
-![Github IFSP](https://img.shields.io/badge/IFSP-5%C2%BA%20Semestre%20ADS-green?style=plastic)
-![Github ADS](https://img.shields.io/badge/ADS-Lab.%20Dev.%20l-green?style=plastic&logo=superuser)
-![Github API](https://img.shields.io/badge/API-Rest-brightgreen?style=plastic&logo=stackexchange)
+Although simple by design, this project is a great practical showcase of core web development concepts such as asynchronous requests, XML parsing, DOM manipulation, input normalization, and user-driven data flows.
 
-<img src="https://portalmaratimba.com.br/wp-content/uploads/2019/12/previsao-tempo-marataizes-1-696x392.jpg" alt="Previsão do Tempo">
+---
 
-> Este projeto tem por finalidade a construção de uuma ferramenta que consuma uma API para consultar a previsão do tempo, de acordo com a cidade selecionada.
+## Project Overview
 
+**Weather Forecast Explorer** allows users to:
 
-## 💻 Pré-requisitos
+1. Type a city name.
+2. Fetch matching cities from the CPTEC/INPE service.
+3. Select the exact city from a dynamic dropdown.
+4. Request and display a 7-day weather forecast.
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
-* Ter conexão com a internet
-* Instalar um IDE para desenvolvimento Web `< VSCode / SublimeText >`
-* Conhecer `< HTML / CSS / JavaScript / AJAX / JQuery >`
+The interface highlights the current day and presents the remaining days in compact forecast cards with icon-based visual cues.
 
-## 🚀 Iniciando o projeto
+---
 
-Para executar o projeto, basta ter conexão com a internet e abrir o arquivo index.html.
+## Key Features
 
-🟦🟦VSCode:
-```
-Para editar o projeto, indico utilizar o VSCode. Basta abrir a pasta do projeto para poder editar os arquivos.
-```
-## 📫 Contribuindo para o projeto
-Para contribuir com o projeto, siga estas etapas:
+- **City lookup with dynamic options** based on user input.
+- **Accent-insensitive search preparation** (diacritic normalization).
+- **Duplicate prevention** when adding cities to the selection list.
+- **7-day weather forecast rendering** from real API data.
+- **Weather-code translation layer** (code → human-readable weather condition).
+- **Condition-based icon mapping** (rainy, cloudy, sunny).
+- **Instant UI refresh** on each new query.
 
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <nome_branch>`.
-3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-5. Crie a solicitação de pull.
+---
 
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+## Concepts Demonstrated
 
-## 🤝 Colaboradores
+This repository is especially useful as a didactic/demo project because it touches multiple foundational topics:
 
-O projeto foi desenvolvido por mim, Isaías Bueno, para a disciplina de Lab. Dev1, do IFSP Catanduva.
+- **HTML structure and semantic organization** for user input and data display.
+- **CSS styling and responsive behavior** for forecast cards.
+- **JavaScript + jQuery** for event-triggered interactions.
+- **AJAX requests** to external endpoints.
+- **XML traversal/parsing** to extract weather values.
+- **Dynamic DOM creation** through template strings.
+- **Client-side validation and guard clauses** for better UX.
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/isaías-bueno-80a0ba157">
-        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHUINi-Lf1_tg/profile-displayphoto-shrink_200_200/0/1585184845908?e=1652918400&v=beta&t=GLaQDXE09vJbt2hr3afBD-6BLd0u3IYf7jh2VQVQhvg" target="_blank" width="100px;" alt="Foto do Isaías Bueno no GitHub"/><br>
-        <sub>
-          <b>Isaías Bueno</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+---
 
+## Tech Stack
 
-## 😄 Seja um dos colaboradores<br>
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6)**
+- **jQuery (AJAX + DOM utilities)**
+- **CPTEC/INPE Weather API (XML responses)**
 
-Quer aprender mais sobre C#? Clique [AQUI](https://www.macoratti.net) e aprenda com um dos melhores professores gratuitamente.
+---
 
-## 📝 Licença
+## External Data Source
 
-Esse projeto não tem fins lucrativos ou comerciais. Sendo assim, é livre para qualquer pessoa utilizar para estudo.
+The application consumes data from CPTEC/INPE endpoints:
 
-[⬆ Voltar ao topo](#LabDEV1-T1)<br>
+- City search: `http://servicos.cptec.inpe.br/XML/listaCidades?city=<CITY_NAME>`
+- Forecast by city ID: `http://servicos.cptec.inpe.br/XML/cidade/7dias/<CITY_ID>/previsao.xml`
+
+> Note: This is a front-end educational example that depends on internet access and API availability.
+
+---
+
+## How to Run
+
+Because this is a static front-end project, setup is minimal:
+
+1. Clone or download the repository.
+2. Ensure internet access.
+3. Open `index.html` in your browser.
+
+---
+
+## Suggested Repository Names
+
+If you want a more marketable/professional repository name, here are good options:
+
+- **weather-forecast-explorer** *(recommended)*
+- `weather-xml-dashboard`
+- `cptec-weather-viewer`
+- `forecast-cards-demo`
+
+---
+
+## Educational Value
+
+This project is ideal for:
+
+- Students learning how to integrate APIs into front-end apps.
+- Practice with asynchronous data flows and rendering pipelines.
+- Demonstrating clean separation between data retrieval, mapping logic, and presentation.
+
+In short: a compact but valuable portfolio piece that demonstrates practical web fundamentals.
